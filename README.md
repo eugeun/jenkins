@@ -3,7 +3,7 @@ This project aimed to deploy dockerized Jenkins with some slaves
 
 # Setup Actions
 ## Prepare Persistent Jenkins Home
-If we like to save Jenkins settings between docker recreation we need to setup some volume container. In this case we would not have any issues related to simply mapping to the underlying Windows file system
+If you like to save Jenkins settings between docker recreation we need to setup some volume container. In this case we would not have any issues related to simply mapping to the underlying Windows file system
 ```
 # Start from root of the project
 cd jenkins-home/
@@ -27,5 +27,6 @@ sudo docker build -t eugeun/jenkins_slave .
 ```
 ## Run Dockerized Jenkins
 1. run docker-compose, find master's auth key in the docker-compose output and type it into the web admin available on `http://<your-host>:8080`
-2. create some JNLP slaves in the web admin, find slave's secrets in the web admin and actualize them in the docker-compose
+2. create some JNLP slaves in the web admin, find slave's secrets in the web admin
+3. uncomment slaves in the docker-compose.yaml and actualize their secrets
 3. rerun docker-compose

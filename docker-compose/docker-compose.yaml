@@ -9,19 +9,19 @@ services:
       - "8080:8080"
     volumes_from:
       - container:jenkins_home
-  slave1:
-    image: "eugeun/jenkins_slave"
-    environment:
-      - JENKINS_SLAVE_NAME=slave1
-      - JENKINS_SLAVE_SECRET=6d225009014f3318b69983b06c11dbca0953961ba7b9b98854b701243cf00e7b
-      - JENKINS_MASTER=jenkins
-    depends_on:
-      - jenkins
-  slave2:
-    image: "eugeun/jenkins_slave"
-    environment:
-      - JENKINS_SLAVE_NAME=slave2
-      - JENKINS_SLAVE_SECRET=d9b6f10baf4e9a141f49e478fdb27ba2dfad1f1a1ddd782de72d99a21879c62d
-      - JENKINS_MASTER=jenkins
-    depends_on:
-      - jenkins
+# slave1:
+#   image: "eugeun/jenkins_slave"
+#   environment:
+#     - JENKINS_SLAVE_NAME=slave1
+#     - JENKINS_SLAVE_SECRET=6d225009014f3318b69983b06c11dbca0953961ba7b9b98854b701243cf00e7b
+#     - JENKINS_MASTER=jenkins
+#   depends_on:
+#     - jenkins
+# slave2:
+#   image: "eugeun/jenkins_slave"
+#   environment:
+#     - JENKINS_SLAVE_NAME=slave2
+#     - JENKINS_SLAVE_SECRET=d9b6f10baf4e9a141f49e478fdb27ba2dfad1f1a1ddd782de72d99a21879c62d
+#     - JENKINS_MASTER=jenkins
+#   depends_on:
+#     - jenkins
