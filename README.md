@@ -27,6 +27,6 @@ sudo docker build -t eugeun/jenkins_slave .
 ```
 ## Run Dockerized Jenkins
 1. run docker-compose, find master's auth key in the docker-compose output and type it into the web admin available on `http://<your-host>:8080`
-2. create some JNLP slaves in the web admin, find slave's secrets in the web admin
+2. create some JNLP slaves in the web admin using "jenkins-slave/Dockerfile:JENKINS_SLAVE_HOME" as value for 'Remote root directory' and find slave's secrets in the web admin
 3. uncomment slaves in the docker-compose.yaml and actualize their secrets
 3. rerun docker-compose
